@@ -1,24 +1,115 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CryptoViewer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pyQ-tJ-SNO">
+                                <rect key="frame" x="0.0" y="646" width="414" height="216"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="216" id="49Z-GN-6tu"/>
+                                </constraints>
+                            </pickerView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="Ho3-9p-dDF">
+                                <rect key="frame" x="0.0" y="54" width="414" height="165"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CrpytoViewer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wai-sv-6wP">
+                                        <rect key="frame" x="72.5" y="0.0" width="269.5" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="8to-e4-y9x"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="230" id="TmD-Og-Bzv"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="50"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rg9-kc-Ek8" userLabel="Coin View">
+                                        <rect key="frame" x="12" y="85" width="390" height="80"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="fu3-HL-SaI">
+                                                <rect key="frame" x="20" y="20" width="360" height="60"/>
+                                            </stackView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bitcoinsign.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="bW8-q0-eHq">
+                                                <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                                <color key="tintColor" name="Icon Color"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="80" id="fAA-lm-EjQ"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="..." textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Igi-oj-aBw" userLabel="...">
+                                                <rect key="frame" x="90" y="25" width="213.5" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USD" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g5i-3q-gfe" userLabel="USD">
+                                                <rect key="frame" x="313" y="25" width="50.5" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
+                                        <constraints>
+                                            <constraint firstItem="fu3-HL-SaI" firstAttribute="leading" secondItem="rg9-kc-Ek8" secondAttribute="leading" constant="20" symbolic="YES" id="6WE-Vh-Y3C"/>
+                                            <constraint firstItem="g5i-3q-gfe" firstAttribute="leading" secondItem="rg9-kc-Ek8" secondAttribute="leading" constant="313" id="8Bt-Qb-yFG"/>
+                                            <constraint firstItem="g5i-3q-gfe" firstAttribute="leading" secondItem="Igi-oj-aBw" secondAttribute="trailing" constant="9.5" id="8Go-gq-VjU"/>
+                                            <constraint firstItem="bW8-q0-eHq" firstAttribute="centerY" secondItem="g5i-3q-gfe" secondAttribute="centerY" id="Hbp-hU-Aja"/>
+                                            <constraint firstAttribute="trailing" secondItem="g5i-3q-gfe" secondAttribute="trailing" constant="26.5" id="I94-MD-Mln"/>
+                                            <constraint firstAttribute="height" constant="80" id="SFm-Hc-8Qe"/>
+                                            <constraint firstItem="bW8-q0-eHq" firstAttribute="centerY" secondItem="Igi-oj-aBw" secondAttribute="centerY" id="TXm-1e-t83"/>
+                                            <constraint firstItem="fu3-HL-SaI" firstAttribute="top" secondItem="rg9-kc-Ek8" secondAttribute="top" constant="20" symbolic="YES" id="Yri-1A-mCK"/>
+                                            <constraint firstAttribute="bottom" secondItem="fu3-HL-SaI" secondAttribute="bottom" id="kc8-7I-3fK"/>
+                                            <constraint firstItem="bW8-q0-eHq" firstAttribute="centerY" secondItem="rg9-kc-Ek8" secondAttribute="centerY" id="qLD-mr-BD5"/>
+                                            <constraint firstAttribute="trailing" secondItem="fu3-HL-SaI" secondAttribute="trailing" constant="10" id="uKR-ax-AuA"/>
+                                            <constraint firstItem="bW8-q0-eHq" firstAttribute="leading" secondItem="rg9-kc-Ek8" secondAttribute="leading" id="wHr-1N-zex"/>
+                                            <constraint firstItem="bW8-q0-eHq" firstAttribute="top" secondItem="rg9-kc-Ek8" secondAttribute="top" constant="-0.5" id="xHk-Pl-Tl2"/>
+                                            <constraint firstItem="Igi-oj-aBw" firstAttribute="leading" secondItem="bW8-q0-eHq" secondAttribute="trailing" constant="10" id="zcE-qV-Y1P"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" name="Background Color"/>
+                        <constraints>
+                            <constraint firstItem="Ho3-9p-dDF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ALU-5t-f4E"/>
+                            <constraint firstItem="pyQ-tJ-SNO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="VBl-pW-fRQ"/>
+                            <constraint firstItem="pyQ-tJ-SNO" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="dtT-BJ-Cq0"/>
+                            <constraint firstItem="Ho3-9p-dDF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="pBA-vo-Ffx"/>
+                            <constraint firstItem="Ho3-9p-dDF" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="qEK-zS-Bor"/>
+                            <constraint firstItem="pyQ-tJ-SNO" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="zqG-8v-1IH"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="110.49107142857143"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bitcoinsign.circle.fill" catalog="system" width="128" height="121"/>
+        <namedColor name="Background Color">
+            <color red="0.72156862745098038" green="0.72156862745098038" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Icon Color">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="tertiaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
