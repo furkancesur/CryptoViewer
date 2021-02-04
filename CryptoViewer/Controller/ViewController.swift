@@ -38,5 +38,6 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         coinManager.getCoinPrice(for: selectedCurrency)
         
     }
+    
 }
 
