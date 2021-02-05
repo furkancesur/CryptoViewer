@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04504EAB25CDDD7800378CDB /* CoinData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04504EAA25CDDD7800378CDB /* CoinData.swift */; };
 		04D8497525C578D900D8A415 /* CoinManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D8497425C578D900D8A415 /* CoinManager.swift */; };
 		D1718C5025B639880001EF9C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1718C4F25B639880001EF9C /* AppDelegate.swift */; };
 		D1718C5225B639880001EF9C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1718C5125B639880001EF9C /* SceneDelegate.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04504EAA25CDDD7800378CDB /* CoinData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinData.swift; sourceTree = "<group>"; };
 		04D8497425C578D900D8A415 /* CoinManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinManager.swift; sourceTree = "<group>"; };
 		D1718C4C25B639880001EF9C /* CryptoViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1718C4F25B639880001EF9C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				04D8497425C578D900D8A415 /* CoinManager.swift */,
+				04504EAA25CDDD7800378CDB /* CoinData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -166,6 +169,7 @@
 			files = (
 				04D8497525C578D900D8A415 /* CoinManager.swift in Sources */,
 				D1718C5425B639880001EF9C /* ViewController.swift in Sources */,
+				04504EAB25CDDD7800378CDB /* CoinData.swift in Sources */,
 				D1718C5025B639880001EF9C /* AppDelegate.swift in Sources */,
 				D1718C5225B639880001EF9C /* SceneDelegate.swift in Sources */,
 			);
